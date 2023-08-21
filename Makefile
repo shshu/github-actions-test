@@ -3,10 +3,10 @@ install:
 		python3 -m pip install -r ./requirements.txt
 
 lint:
-	pylint --disable=R,C ./src ./tests
+	python3 -m pylint --disable=R,C ./src
 
 format: 
-	black .
+	python3 -m black .
 
 test:
-	python3 -m pytest -vvvs tests/
+	python3 -m pytest -vvvs src/tests/
